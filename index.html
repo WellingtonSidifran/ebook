@@ -3,147 +3,377 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Domine a Engenharia de Prompts e aprenda a criar prompts poderosos para IA. Aumente sua produtividade, economize horas e revolucione seu trabalho com técnicas avançadas e práticas.">
+  <meta name="description" content="Domine a Engenharia de Prompts e transforme sua produtividade com IA. Descubra como criar prompts poderosos e economizar horas no seu dia com técnicas avançadas e práticas.">
   <meta name="keywords" content="engenharia de prompts, prompts para IA, como criar prompts, prompts avançados, produtividade com IA, automação com inteligência artificial, técnicas de prompts, guia de prompts, ebook prompts, IA para negócios, prompts eficientes">
-  <title>Engenharia de Prompts: Domine a IA e Aumente sua Produtividade</title>
+  <title>Engenharia de Prompts: Domine a IA e Transforme Sua Vida Profissional</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+    :root {
+      --primary: #1d3557;
+      --secondary: #457b9d;
+      --accent: #e63946;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --transition: all 0.4s ease;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
     header {
-      background: linear-gradient(to right, #1d3557, #457b9d);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
       text-align: center;
-      padding: 100px 20px 60px;
-      border-radius: 0 0 20px 20px;
+      padding: 120px 20px 80px;
+      border-radius: 0 0 30px 30px;
+      position: relative;
+      overflow: hidden;
     }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 60%
+      );
+      transform: rotate(30deg);
+      pointer-events: none;
+    }
+
     header h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
+      font-size: 3rem;
+      font-weight: 700;
       margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
+
     header p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       max-width: 800px;
       margin: 0 auto 30px;
+      position: relative;
+      z-index: 1;
     }
+
+    .ebook-cover {
+      perspective: 1000px;
+      margin: 40px 0;
+    }
+
     .ebook-cover img {
       max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      transform-style: preserve-3d;
     }
-    .benefits h3, .benefits h5 {
-      color: #1d3557;
+
+    .ebook-cover img:hover {
+      transform: translateY(-10px) rotateX(10deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .benefits {
+      margin: 80px 0;
+    }
+
+    .benefits h3 {
+      color: var(--primary);
       font-weight: 700;
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
     }
+
+    .benefit-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-card h5 {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .benefit-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
     .cta-section {
-      background: linear-gradient(to right, #1d3557, #457b9d);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
       border-radius: 20px;
-      margin: 60px 0;
+      margin: 80px 0;
+      position: relative;
+      overflow: hidden;
     }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -20%;
+      width: 140%;
+      height: 140%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
     .cta-section h2 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
     }
-    .cta-section button {
-      background: #e63946;
+
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-button {
+      background: var(--accent);
       border: none;
       font-size: 1.3rem;
-      padding: 15px 40px;
+      padding: 18px 40px;
       border-radius: 50px;
       color: white;
-      transition: 0.3s;
-      margin-top: 20px;
+      font-weight: 600;
+      transition: var(--transition);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      cursor: pointer;
     }
-    .cta-section button:hover {
+
+    .cta-button:hover {
       background: #d62828;
-      transform: translateY(-3px);
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
     }
+
+    .cta-button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%, -50%);
+      transform-origin: 50% 50%;
+    }
+
+    .cta-button:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(20, 20);
+        opacity: 0;
+      }
+    }
+
     .testimonials {
-      background: #e8f4f8;
-      padding: 50px 20px;
-      border-radius: 15px;
-      margin: 60px 0;
+      background: white;
+      padding: 60px 20px;
+      border-radius: 20px;
+      margin: 80px 0;
+      box-shadow: var(--shadow);
     }
+
     .testimonials h3 {
-      color: #1d3557;
+      color: var(--primary);
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      font-size: 2rem;
     }
+
+    .testimonial-card {
+      background: rgba(29, 53, 87, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 5px solid var(--accent);
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card .author {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .urgency-banner {
+      background: rgba(230, 57, 70, 0.1);
+      border: 2px solid var(--accent);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      margin: 40px 0;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
     footer {
-      background: #1d3557;
+      background: var(--primary);
       color: white;
       text-align: center;
       padding: 30px 20px;
-      margin-top: 60px;
+      margin-top: 80px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Engenharia de Prompts: Domine a IA e Aumente sua Produtividade</h1>
-    <p>Descubra como criar <strong>prompts poderosos</strong> para IA e economize horas no seu dia com técnicas avançadas e práticas, aplicáveis em qualquer área.</p>
+    <h1>Engenharia de Prompts: Domine a IA e Transforme Sua Vida Profissional</h1>
+    <p>Descubra o <strong>poder dos prompts avançados</strong> para IA e <strong>economize horas</strong> no seu dia, com técnicas testadas por especialistas.</p>
   </header>
 
   <main class="container my-5">
     <!-- Seção do Ebook -->
     <div class="row align-items-center">
-      <div class="col-md-6 ebook-cover">
-        <img src="imagens/capa.png" alt="Capa do Ebook Engenharia de Prompts">
+      <div class="col-lg-6 ebook-cover">
+        <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/39af/841f/-3d3/3-4e3d-9eae-b40075de8d8d/image.jpg?se=2025-09-01T16%3A05%3A59Z&sp=r&sv=2025-07-05&sr=b&sig=OYDRqjD9Kj7Mo/JLOj79l8qTe6MaABDK4GNgVz9qaF8%3D" alt="Capa do Ebook Engenharia de Prompts">
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <h2 class="mb-4">O que você vai aprender neste eBook?</h2>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">✅ <strong>Estratégias avançadas</strong> para criar prompts precisos e eficientes</li>
-          <li class="list-group-item">✅ Como <strong>economizar horas</strong> usando IA para automação de tarefas</li>
-          <li class="list-group-item">✅ <strong>Casos práticos</strong> de engenharia de prompts para marketing, vendas, gestão e mais</li>
-          <li class="list-group-item">✅ <strong>Técnicas exclusivas</strong> para evitar erros comuns e maximizar resultados</li>
-          <li class="list-group-item">✅ <strong>Ferramentas e modelos</strong> para aplicar IA no seu dia a dia</li>
-        </ul>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="benefit-card">
+              <i>🚀</i>
+              <h5>Estratégias Avançadas</h5>
+              <p>Aprenda a criar <strong>prompts poderosos</strong> que geram resultados precisos e relevantes.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="benefit-card">
+              <i>⏳</i>
+              <h5>Economize Horas</h5>
+              <p>Automatize tarefas repetitivas e <strong>ganhe tempo</strong> para o que realmente importa.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="benefit-card">
+              <i>🎯</i>
+              <h5>Casos Práticos</h5>
+              <p>Aplique IA em <strong>marketing, vendas, gestão</strong> e muito mais com exemplos reais.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="benefit-card">
+              <i>💡</i>
+              <h5>Técnicas Exclusivas</h5>
+              <p>Evite erros comuns e <strong>maximize seus resultados</strong> com dicas de especialistas.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Benefícios -->
-    <section class="benefits mt-5">
-      <div class="text-center mb-5">
-        <h3>Por que dominar a Engenharia de Prompts?</h3>
-        <p class="text-muted">Aprenda a usar IA de forma estratégica e transforme sua produtividade.</p>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <h5>🚀 <strong>Produtividade 10x</strong></h5>
-          <p>Automatize tarefas repetitivas e foque no que realmente importa para o seu sucesso.</p>
+    <!-- Depoimentos -->
+    <section class="testimonials">
+      <h3>O que nossos leitores dizem</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="testimonial-card">
+            <p>"Este eBook mudou minha forma de trabalhar. Agora consigo <strong>fazer em 1 hora</strong> o que antes levava um dia!"</p>
+            <div class="author">— Ana Silva, Empreendedora Digital</div>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <h5>🎯 <strong>Prompts Precisos</strong></h5>
-          <p>Saiba como direcionar a IA para gerar exatamente o que você precisa, sem retrabalho.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h5>💡 <strong>Inovação com IA</strong></h5>
-          <p>Mantenha-se à frente com técnicas de prompts usadas por profissionais de alta performance.</p>
+        <div class="col-md-6">
+          <div class="testimonial-card">
+            <p>"As técnicas de prompts ensinadas aqui são <strong>revolucionárias</strong>. Minha produtividade aumentou 300%!"</p>
+            <div class="author">— Carlos Oliveira, Gestor de Marketing</div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Banner de Urgência -->
+    <div class="urgency-banner">
+      <p>⏰ <strong>Oferta por tempo limitado!</strong> Garanta já o seu eBook e comece a transformar sua produtividade hoje mesmo.</p>
+    </div>
+
     <!-- Chamada para Ação -->
     <section class="cta-section">
-      <h2>Garanta já o seu eBook e revolucione sua forma de trabalhar!</h2>
-      <p>Não perca a chance de dominar a <strong>engenharia de prompts</strong> e transformar sua rotina com IA.</p>
-      <button>QUERO MEU EBOOK AGORA</button>
+      <h2>Pronto para dominar a IA?</h2>
+      <p>Não deixe para depois. <strong>O futuro pertence a quem age agora.</strong></p>
+      <button class="cta-button">QUERO MEU EBOOK AGORA!</button>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 - Todos os direitos reservados | [Nome da Sua Marca]</p>
   </footer>
+
+  <script>
+    // Efeito de scroll suave para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
