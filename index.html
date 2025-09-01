@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Domine a Engenharia de Prompts e transforme sua produtividade com IA. Descubra como criar prompts poderosos e economizar horas no seu dia com técnicas avançadas e práticas.">
-  <meta name="keywords" content="engenharia de prompts, prompts para IA, como criar prompts, prompts avançados, produtividade com IA, automação com inteligência artificial, técnicas de prompts, guia de prompts, ebook prompts, IA para negócios, prompts eficientes">
-  <title>Engenharia de Prompts: Domine a IA e Transforme Sua Vida Profissional</title>
+  <title>Engenharia de Prompts: Domine a IA e Ganhe Tempo | Curso Avançado</title>
+  <meta name="description" content="Domine a arte da Engenharia de Prompts com nossa CEO especialista. Aprenda técnicas secretas de IA para economizar horas no seu dia e aumentar drasticamente sua produtividade.">
+  <meta name="keywords" content="engenharia de prompts, curso IA, ChatGPT, inteligência artificial, prompts eficientes, técnicas IA, produtividade com IA, aprender IA, curso online">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #1d3557;
@@ -17,362 +16,771 @@
       --accent: #e63946;
       --light: #f8f9fa;
       --dark: #212529;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      --transition: all 0.4s ease;
     }
-
+    
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--light);
       color: var(--dark);
       line-height: 1.6;
-      overflow-x: hidden;
     }
-
+    
     header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       color: white;
       text-align: center;
-      padding: 120px 20px 80px;
-      border-radius: 0 0 30px 30px;
+      padding: 100px 20px 80px;
       position: relative;
       overflow: hidden;
     }
-
-    header::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        to bottom right,
-        rgba(255, 255, 255, 0.1) 0%,
-        rgba(255, 255, 255, 0) 60%
-      );
-      transform: rotate(30deg);
-      pointer-events: none;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
+    
+    .header-content {
       position: relative;
-      z-index: 1;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      z-index: 2;
     }
-
-    header p {
+    
+    .header-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease;
+    }
+    
+    header .lead {
       font-size: 1.4rem;
       max-width: 800px;
-      margin: 0 auto 30px;
-      position: relative;
-      z-index: 1;
+      margin: 0 auto 25px;
+      animation: fadeInUp 1s ease 0.3s both;
     }
-
-    .ebook-cover {
-      perspective: 1000px;
-      margin: 40px 0;
-    }
-
-    .ebook-cover img {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      transform-style: preserve-3d;
-    }
-
-    .ebook-cover img:hover {
-      transform: translateY(-10px) rotateX(10deg);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .benefits {
-      margin: 80px 0;
-    }
-
-    .benefits h3 {
-      color: var(--primary);
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 2rem;
-    }
-
-    .benefit-card {
-      background: white;
-      border-radius: 15px;
-      padding: 30px 20px;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      margin-bottom: 30px;
-    }
-
-    .benefit-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    }
-
-    .benefit-card h5 {
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-    }
-
-    .benefit-card i {
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 15px;
-    }
-
-    .cta-section {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      border-radius: 20px;
-      margin: 80px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      right: -20%;
-      width: 140%;
-      height: 140%;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .cta-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-section p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-button {
-      background: var(--accent);
-      border: none;
-      font-size: 1.3rem;
-      padding: 18px 40px;
-      border-radius: 50px;
+    
+    .badge {
+      background-color: var(--accent);
       color: white;
       font-weight: 600;
-      transition: var(--transition);
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .cta-button:hover {
-      background: #d62828;
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
-    }
-
-    .cta-button::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 5px;
-      height: 5px;
-      background: rgba(255, 255, 255, 0.5);
-      opacity: 0;
-      border-radius: 100%;
-      transform: scale(1, 1) translate(-50%, -50%);
-      transform-origin: 50% 50%;
-    }
-
-    .cta-button:focus:not(:active)::after {
-      animation: ripple 1s ease-out;
-    }
-
-    @keyframes ripple {
-      0% {
-        transform: scale(0, 0);
-        opacity: 0.5;
-      }
-      100% {
-        transform: scale(20, 20);
-        opacity: 0;
-      }
-    }
-
-    .testimonials {
-      background: white;
-      padding: 60px 20px;
-      border-radius: 20px;
-      margin: 80px 0;
-      box-shadow: var(--shadow);
-    }
-
-    .testimonials h3 {
-      color: var(--primary);
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 2rem;
-    }
-
-    .testimonial-card {
-      background: rgba(29, 53, 87, 0.05);
-      border-radius: 15px;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-left: 5px solid var(--accent);
-    }
-
-    .testimonial-card p {
-      font-style: italic;
-      font-size: 1.1rem;
+      padding: 8px 15px;
+      border-radius: 30px;
       margin-bottom: 20px;
+      display: inline-block;
+      animation: pulse 2s infinite;
     }
-
-    .testimonial-card .author {
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    .urgency-banner {
-      background: rgba(230, 57, 70, 0.1);
-      border: 2px solid var(--accent);
+    
+    .author-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
       border-radius: 15px;
       padding: 20px;
-      text-align: center;
-      margin: 40px 0;
-      font-weight: 600;
-      color: var(--accent);
+      margin: 30px auto 0;
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 1s ease 0.6s both;
     }
-
-    footer {
-      background: var(--primary);
+    
+    .author-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-right: 15px;
+    }
+    
+    .author-info h4 {
+      margin: 0;
+      font-weight: 600;
+    }
+    
+    .author-info p {
+      margin: 5px 0 0;
+      opacity: 0.9;
+      font-size: 0.9rem;
+    }
+    
+    .ebook-cover {
+      position: relative;
+      transition: all 0.5s ease;
+    }
+    
+    .ebook-cover img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .ebook-cover:hover img {
+      transform: translateY(-5px) scale(1.02);
+    }
+    
+    .ebook-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--accent);
+      color: white;
+      padding: 12px 15px;
+      border-radius: 50%;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      animation: pulse 2s infinite;
+    }
+    
+    h2, h3, h4, h5 {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    
+    .benefit-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 5px solid var(--secondary);
+      opacity: 0;
+    }
+    
+    .benefit-card.animated {
+      animation: fadeInUp 1s ease forwards;
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+    }
+    
+    .testimonials {
+      background: linear-gradient(to bottom, #f1f6ff, #f8f9fa);
+      padding: 80px 0;
+      margin: 80px 0;
+    }
+    
+    .testimonial-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin: 15px;
+      position: relative;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .testimonial-card.animated {
+      animation: fadeIn 1s ease forwards;
+    }
+    
+    .testimonial-card:after {
+      content: """;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 5rem;
+      color: rgba(29, 53, 87, 0.1);
+      font-family: Georgia, serif;
+    }
+    
+    .client-info {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .client-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    
+    .faq-section {
+      margin: 80px 0;
+    }
+    
+    .accordion-button {
+      font-weight: 600;
+      padding: 20px;
+    }
+    
+    .accordion-button:not(.collapsed) {
+      background-color: rgba(29, 53, 87, 0.05);
+      color: var(--primary);
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       color: white;
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 80px;
-      border-radius: 20px 20px 0 0;
+      padding: 70px 20px;
+      border-radius: 20px;
+      margin: 60px 0;
+      position: relative;
+      overflow: hidden;
     }
-
+    
+    .cta-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .guarantee-badge {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px 25px;
+      border-radius: 30px;
+      display: inline-flex;
+      align-items: center;
+      margin: 25px 0;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .guarantee-badge i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+    
+    .btn-cta {
+      background: var(--accent);
+      border: none;
+      font-size: 1.2rem;
+      padding: 18px 45px;
+      border-radius: 50px;
+      color: white;
+      transition: 0.3s;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(230, 57, 70, 0.3);
+      display: inline-block;
+      margin: 15px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-cta:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn-cta:hover:before {
+      left: 100%;
+    }
+    
+    .btn-cta:hover {
+      background: #d62828;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(230, 57, 70, 0.4);
+    }
+    
+    .price-container {
+      margin: 25px 0;
+    }
+    
+    .original-price {
+      text-decoration: line-through;
+      opacity: 0.7;
+      font-size: 1.2rem;
+    }
+    
+    .current-price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0 15px;
+    }
+    
+    .discount-badge {
+      background: white;
+      color: var(--accent);
+      padding: 5px 15px;
+      border-radius: 30px;
+      font-weight: 700;
+    }
+    
+    .payment-methods {
+      margin-top: 20px;
+      opacity: 0.8;
+    }
+    
+    .countdown {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 500px;
+      backdrop-filter: blur(5px);
+    }
+    
+    .countdown-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    
+    .countdown-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+    
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+    
+    .social-links {
+      margin: 20px 0;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 15px;
+      transition: 0.3s;
+    }
+    
+    .social-links a:hover {
+      color: var(--secondary);
+    }
+    
+    /* Animações */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInDown {
+      from { 
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .emotional-trigger {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 40px 0;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .emotional-trigger h3 {
+      color: white;
+      margin-bottom: 20px;
+    }
+    
+    /* Responsividade */
     @media (max-width: 768px) {
+      header {
+        padding: 80px 20px 60px;
+      }
+      
       header h1 {
         font-size: 2.2rem;
       }
-      header p {
-        font-size: 1.1rem;
+      
+      header .lead {
+        font-size: 1.2rem;
+      }
+      
+      .author-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .author-img {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .ebook-badge {
+        right: 10px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Engenharia de Prompts: Domine a IA e Transforme Sua Vida Profissional</h1>
-    <p>Descubra o <strong>poder dos prompts avançados</strong> para IA e <strong>economize horas</strong> no seu dia, com técnicas testadas por especialistas.</p>
+    <div class="header-pattern"></div>
+    <div class="header-content">
+      <div class="badge">LANÇAMENTO EXCLUSIVO</div>
+      <h1>Domine a Engenharia de Prompts e Ganhe 15 Horas Por Semana</h1>
+      <p class="lead">Descubra as técnicas secretas de IA que vão transformar sua produtividade e liberar tempo para o que realmente importa</p>
+      
+      <div class="author-card">
+        <img src="imagens/capa.jpg" alt="Especialista em Engenharia de Prompts" class="author-img">
+        <div class="author-info">
+          <h4>Ana Silva</h4>
+          <p>CEO e Especialista em IA com 10+ anos de experiência</p>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main class="container my-5">
-    <!-- Seção do Ebook -->
     <div class="row align-items-center">
-      <div class="col-lg-6 ebook-cover">
-        <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/39af/841f/-3d3/3-4e3d-9eae-b40075de8d8d/image.jpg?se=2025-09-01T16%3A05%3A59Z&sp=r&sv=2025-07-05&sr=b&sig=OYDRqjD9Kj7Mo/JLOj79l8qTe6MaABDK4GNgVz9qaF8%3D" alt="Capa do Ebook Engenharia de Prompts">
+      <div class="col-md-6 ebook-cover">
+        <div class="ebook-badge">-50%</div>
+        <img src="imagens/capa-premium.png" alt="Curso de Engenharia de Prompts - Domine a IA">
       </div>
-      <div class="col-lg-6">
-        <h2 class="mb-4">O que você vai aprender neste eBook?</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="benefit-card">
-              <i>🚀</i>
-              <h5>Estratégias Avançadas</h5>
-              <p>Aprenda a criar <strong>prompts poderosos</strong> que geram resultados precisos e relevantes.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="benefit-card">
-              <i>⏳</i>
-              <h5>Economize Horas</h5>
-              <p>Automatize tarefas repetitivas e <strong>ganhe tempo</strong> para o que realmente importa.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="benefit-card">
-              <i>🎯</i>
-              <h5>Casos Práticos</h5>
-              <p>Aplique IA em <strong>marketing, vendas, gestão</strong> e muito mais com exemplos reais.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="benefit-card">
-              <i>💡</i>
-              <h5>Técnicas Exclusivas</h5>
-              <p>Evite erros comuns e <strong>maximize seus resultados</strong> com dicas de especialistas.</p>
-            </div>
-          </div>
+      <div class="col-md-6">
+        <h2 class="mb-4">O que você vai dominar com este método exclusivo?</h2>
+        <ul class="list-group list-group-flush mb-4">
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-check-circle me-3 text-success"></i>
+            <span>Estratégias avançadas de prompts que poucos conhecem</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-check-circle me-3 text-success"></i>
+            <span>Como economizar 15+ horas semanais usando IA inteligentemente</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-check-circle me-3 text-success"></i>
+            <span>Casos reais aplicáveis no seu dia a dia profissional</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-check-circle me-3 text-success"></i>
+            <span>Como evitar os 7 erros catastróficos ao usar ChatGPT</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-check-circle me-3 text-success"></i>
+            <span>Técnicas para fazer a IA gerar exatamente o que você precisa</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-check-circle me-3 text-success"></i>
+            <span>Bônus exclusivo: Biblioteca com 500+ prompts prontos para usar</span>
+          </li>
+        </ul>
+        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="#oferta" class="btn btn-primary btn-lg me-md-2">Quero Economizar Horas Agora!</a>
         </div>
       </div>
     </div>
 
-    <!-- Depoimentos -->
-    <section class="testimonials">
-      <h3>O que nossos leitores dizem</h3>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="testimonial-card">
-            <p>"Este eBook mudou minha forma de trabalhar. Agora consigo <strong>fazer em 1 hora</strong> o que antes levava um dia!"</p>
-            <div class="author">— Ana Silva, Empreendedora Digital</div>
+    <div class="emotional-trigger">
+      <h3><i class="fas fa-heart me-2"></i> Imagine ter tempo para...</h3>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <p><i class="fas fa-smile me-2"></i> Mais momentos com sua família</p>
+        </div>
+        <div class="col-md-4">
+          <p><i class="fas fa-plane me-2"></i> Pursuir seus hobbies e paixões</p>
+        </div>
+        <div class="col-md-4">
+          <p><i class="fas fa-brain me-2"></i> Focar no crescimento do seu negócio</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="benefits mt-5 pt-5">
+      <div class="text-center mb-5">
+        <h2>Por que este método é diferente de tudo que você já viu?</h2>
+        <p class="lead">Desenvolvido por especialistas após anos de pesquisa e aplicação em grandes empresas</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h4>Resultados Imediatos</h4>
+            <p>Aplique as técnicas hoje e veja a diferença amanhã. Método passo a passo comprovado.</p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="testimonial-card">
-            <p>"As técnicas de prompts ensinadas aqui são <strong>revolucionárias</strong>. Minha produtividade aumentou 300%!"</p>
-            <div class="author">— Carlos Oliveira, Gestor de Marketing</div>
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h4>Vantagem Competitiva</h4>
+            <p>Use a IA de forma mais inteligente que seus concorrentes e se destaque no mercado.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-gem"></i>
+            </div>
+            <h4>Conteúdo Exclusivo</h4>
+            <p>Estratégias que não são ensinadas em cursos comuns. Conhecimento de elite.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Banner de Urgência -->
-    <div class="urgency-banner">
-      <p>⏰ <strong>Oferta por tempo limitado!</strong> Garanta já o seu eBook e comece a transformar sua produtividade hoje mesmo.</p>
-    </div>
+    <section class="testimonials">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>O que estão dizendo sobre o método</h2>
+          <p class="lead">Depoimentos reais de profissionais que aplicaram as técnicas</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>"Depois desse curso, consigo fazer em 2 horas o que antes levava 2 dias. Revolucionou minha produtividade e me deu tempo para minha família!"</p>
+              <div class="client-info">
+                <img src="imagens/cliente1.jpg" alt="Cliente satisfeito" class="client-img">
+                <div>
+                  <strong>Carlos Silva</strong>
+                  <p>Diretor de Marketing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>"Finalmente consegui fazer a IA gerar exatamente o que preciso. As técnicas de prompts mudaram completamente minha relação com a tecnologia e meu negócio cresceu 40%!"</p>
+              <div class="client-info">
+                <img src="imagens/cliente2.jpg" alt="Cliente satisfeito" class="client-img">
+                <div>
+                  <strong>Ana Costa</strong>
+                  <p>Empreendedora</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>"Investi em vários cursos de IA, mas nenhum se compara a este. Conteúdo prático, direto ao ponto e com resultados imediatos. Vale cada centavo!"</p>
+              <div class="client-info">
+                <img src="imagens/cliente3.jpg" alt="Cliente satisfeito" class="client-img">
+                <div>
+                  <strong>Roberto Alves</strong>
+                  <p>Gerente de Projetos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Chamada para Ação -->
-    <section class="cta-section">
-      <h2>Pronto para dominar a IA?</h2>
-      <p>Não deixe para depois. <strong>O futuro pertence a quem age agora.</strong></p>
-      <button class="cta-button">QUERO MEU EBOOK AGORA!</button>
+    <section class="faq-section">
+      <div class="text-center mb-5">
+        <h2>Perguntas Frequentes</h2>
+        <p class="lead">Tire suas dúvidas sobre o método exclusivo de Engenharia de Prompts</p>
+      </div>
+      
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Para quem é este método?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Para qualquer profissional que queira aumentar sua produtividade usando IA: empreendedores, marketers, redatores, desenvolvedores, pesquisadores e qualquer pessoa que queira dominar a arte de se comunicar com inteligências artificiais.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Preciso ter conhecimento técnico?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Não! O método foi desenvolvido para iniciantes e avançados. Começamos do zero e evoluímos até as técnicas mais avançadas de forma gradual e didática.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Quanto tempo leva para ver resultados?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Os primeiros resultados são imediatos. Na primeira hora de estudo você já aprenderá técnicas que poderá aplicar instantaneamente. Em uma semana, estará usando a IA com maestria.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              Como recebo o acesso ao material?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Imediatamente após a confirmação do pagamento, você receberá um e-mail com acesso à área de membros, onde poderá baixar o eBook e todos os bônus.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="oferta" class="cta-section">
+      <div class="cta-pattern"></div>
+      <div class="cta-content">
+        <h2>Pronto para dominar a IA e revolucionar sua produtividade?</h2>
+        <p class="lead">Junte-se a milhares de profissionais que já transformaram sua relação com a Inteligência Artificial</p>
+        
+        <div class="countdown mb-4">
+          <p class="mb-2">Esta oferta expira em:</p>
+          <div class="d-flex justify-content-center">
+            <div class="mx-2">
+              <div class="countdown-number" id="hours">24</div>
+              <div class="countdown-label">Horas</div>
+            </div>
+            <div class="mx-2">
+              <div class="countdown-number" id="minutes">00</div>
+              <div class="countdown-label">Minutos</div>
+            </div>
+            <div class="mx-2">
+              <div class="countdown-number" id="seconds">00</div>
+              <div class="countdown-label">Segundos</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="price-container">
+          <span class="original-price">De R$ 297,00</span>
+          <span class="current-price">R$ 147,00</span>
+          <span class="discount-badge">50% OFF</span>
+        </div>
+        
+        <div class="guarantee-badge">
+          <i class="fas fa-shield-alt"></i>
+          Garantia incondicional de 7 dias
+        </div>
+        
+        <div>
+          <a href="#" class="btn-cta">
+            <i class="fas fa-arrow-right me-2"></i>Quero Acesso Imediato!
+          </a>
+        </div>
+        
+        <div class="payment-methods">
+          <p>Pagamento seguro via cartão, PIX ou boleto</p>
+          <div>
+            <i class="fab fa-cc-visa me-2"></i>
+            <i class="fab fa-cc-mastercard me-2"></i>
+            <i class="fab fa-cc-amex me-2"></i>
+            <i class="fas fa-barcode"></i>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 - Todos os direitos reservados | [Nome da Sua Marca]</p>
+    <div class="container">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 - Engenharia de Prompts - Todos os direitos reservados</p>
+      <p>Política de Privacidade | Termos de Uso</p>
+    </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Efeito de scroll suave para links internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+    // Animação de elementos ao rolar
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedElements = document.querySelectorAll('.benefit-card, .testimonial-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
         });
+      }, { threshold: 0.1 });
+      
+      animatedElements.forEach(element => {
+        observer.observe(element);
       });
+      
+      // Contador regressivo
+      const countdown = () => {
+        const now = new Date();
+        const target = new Date();
+        target.setHours(24, 0, 0, 0);
+        
+        if (now > target) {
+          target.setDate(target.getDate() + 1);
+        }
+        
+        const diff = target - now;
+        
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+      };
+      
+      countdown();
+      setInterval(countdown, 1000);
     });
   </script>
 </body>
